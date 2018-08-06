@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Board from './board/Board.component.js'
+import Presets from './presets/Presets.component.js'
+// import AsciiLogoArray from './assets/ascii-logo.js'
 import './App.css';
 
 class App extends Component {
@@ -7,12 +9,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          {/*AsciiLogoArray.map(string=>(<div className='asciiLogo'>{string}</div>))*/}
+          <h1 className="App-title">Welcome to D&D 5e Random Dungeon Generator</h1>
+          <Presets />
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Board />
       </div>
     );
   }
